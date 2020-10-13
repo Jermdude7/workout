@@ -124,7 +124,7 @@ let workoutSeed = [
   }
 ];
 
-db.Workout.deleteMany({})
+db.Workout.deleteMany({})//this is a function predefined by mongo
   .then(() => db.Workout.collection.insertMany(workoutSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
